@@ -71,7 +71,7 @@ type URLOpenConfiguration = {
     promptsUserIfNeeded?: boolean
 }
 
-global {
+declare global {
     function setTimeout(callback: (...args: any[]) => void, ms: number, ...args: any[]): number;
     function clearTimeout(timeoutId: number): void;
     function setInterval(callback: (...args: any[]) => void, ms: number, ...args: any[]): number;

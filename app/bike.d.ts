@@ -1,13 +1,12 @@
 import { Sidebar } from "./sidebar";
-import { Inspector } from "./inspector_";
+import { Inspector } from "./inspector";
 import { Commands } from "./commands";
-import { StyleSheets } from "./stylesheets";
 import { Keybindings } from "./keybindings";
 import { OutlineEditor } from "./outline-editor";
 import { DOMScriptName, DOMScriptHandle } from "./dom-script";
 import { URL, Disposable, Permissions } from "./system";
 
-global {
+declare global {
   /** The bike global API. */
   const bike: {
     /** The build # of the bike app. */
@@ -18,8 +17,6 @@ global {
     readonly apiVersion: string;
     /** The interface for adding commands. */
     readonly commands: Commands;
-    /** The interface for adding stylesheets and processors. */
-    //readonly styleSheets: StyleSheets;
     /** The interface for adding keybindings. */
     readonly keybindings: Keybindings;
     /** The interface to read/write to the system clipboard. */
@@ -148,7 +145,6 @@ export interface Document {
 
 /** Interface for a document window. */
 export interface Window {
-  readonly frame: Rect;
   readonly title: string;
   readonly sidebar: Sidebar;
   readonly inspector: Inspector;

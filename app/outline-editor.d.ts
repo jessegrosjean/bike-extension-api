@@ -8,6 +8,7 @@ import {
   TransactionOptions,
 } from "./outline";
 import { OutlinePath } from "./outline-path";
+import { Disposable } from "./system";
 import { View } from "./bike";
 
 /** OutlineEditor is a view that displays an outline. */

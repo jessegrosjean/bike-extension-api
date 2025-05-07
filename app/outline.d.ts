@@ -1,4 +1,5 @@
 import { OutlinePath, OutlinePathValue } from "./outline-path";
+import { Disposable } from "./system";
 
 /** Outline is a tree of rows. */
 export class Outline {
