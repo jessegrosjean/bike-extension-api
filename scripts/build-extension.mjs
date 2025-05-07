@@ -23,6 +23,9 @@ export async function buildExtension(out = "out") {
             "src/dom/*.tsx",
         ],
         external: [
+            "@app",
+            "@dom",
+            "@style",
             "react",
             "react-dom",
             "react/jsx-runtime",
